@@ -1,0 +1,5 @@
+# use_frameworks!
+target 'SNPDialogExample' do
+  pod 'SNPDialog', :path => '../'
+  pod 'BlocksKit'
+end

@@ -1,0 +1,33 @@
+{
+  "name": "SNPDialog",
+  "version": "1.0.0",
+  "summary": "A short description of SNPDialog.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/snapp-cab/snapp-ios-dialog",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Nader Rashed": "nader.rashed@snapp.cab"
+  },
+  "source": {
+    "git": "git@github.com:snapp-cab/snapp-ios-dialog.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SNPDialog/Classes/**/*",
+  "resource_bundles": {
+    "SNPDialog": [
+      "SNPDialog/Assets/*"
+    ]
+  },
+  "frameworks": "UIKit",
+  "dependencies": {
+    "BlocksKit": [
+
+    ]
+  }
+}
