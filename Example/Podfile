@@ -1,0 +1,15 @@
+use_frameworks!
+platform :ios, '9.0'
+
+def standard_pods
+    pod 'SNPUtilities', :path => '../'
+end
+
+target 'SNPUtilities_Example' do
+  standard_pods
+end
+
+target 'SNPUtilities_Tests' do
+    inherit! :search_paths
+    standard_pods
+end

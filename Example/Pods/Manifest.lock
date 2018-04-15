@@ -1,0 +1,16 @@
+PODS:
+  - SNPUtilities (0.0.1)
+
+DEPENDENCIES:
+  - SNPUtilities (from `../`)
+
+EXTERNAL SOURCES:
+  SNPUtilities:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SNPUtilities: 966c77ca948bd9a97cbd831a9873c89d3e607022
+
+PODFILE CHECKSUM: b37568966b96fb37a12d93901fc48da1287b8575
+
+COCOAPODS: 1.5.0
