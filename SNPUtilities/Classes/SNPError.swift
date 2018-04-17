@@ -10,9 +10,9 @@ import Foundation
 
 public class SNPError: Codable {
     // MARK: - Properties
-    var domain = SNPErrorDomain.generic
-    var code = -1
-    var message = ""
+    public private(set) var domain = SNPErrorDomain.generic
+    public private(set) var code = -1
+    public private(set) var message = ""
     
     // MARK: - Methods
     required public init(domain: String, code: Int = -1, message: String) {
