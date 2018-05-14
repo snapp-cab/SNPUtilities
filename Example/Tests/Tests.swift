@@ -69,7 +69,7 @@ class Tests: XCTestCase {
     }
     
     func testClearTempDirectoryWasSuccessful() {
-        class MockUtilities: Utilities {
+        class MockUtilities: SNPUtilities {
         }
         
         //generate temp directory and test of existance
@@ -82,7 +82,7 @@ class Tests: XCTestCase {
     }
     
     func testSearchAndDeleteFilesInDocumentsFolderWasSuccessful() {
-        class MockUtilities: Utilities {
+        class MockUtilities: SNPUtilities {
             
             override class func searchAndDeleteFilesInDocumentsFolder(ext: String) {
                 let fileManager = FileManager.default
