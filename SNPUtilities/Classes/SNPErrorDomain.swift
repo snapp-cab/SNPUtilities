@@ -10,11 +10,12 @@ import Foundation
 
 public struct SNPErrorDomain {
     private static let prefix: String = {
-        if Bundle.main.info(for: kCFBundleIdentifierKey! as String) == nil {
-            return "test.bundle.error"
-        } else {
-            return Bundle.main.info(for: kCFBundleIdentifierKey! as String) + ".error"
-        }
+//        if Bundle.main.info(for: kCFBundleIdentifierKey! as String) == nil {
+//            return "test.bundle.error"
+//        } else {
+//            return Bundle.main.info(for: kCFBundleIdentifierKey! as String) + ".error"
+//        }
+        return "error"
     }()
     
     static let generic = prefix
