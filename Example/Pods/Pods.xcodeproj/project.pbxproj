@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		1AA967CA20B32243008961BB /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA967C620B32243008961BB /* Int.swift */; };
 		1AA967CB20B32243008961BB /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA967C720B32243008961BB /* Dictionary.swift */; };
-		1AA967CC20B32243008961BB /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA967C820B32243008961BB /* Bundle.swift */; };
 		1AA967CD20B32243008961BB /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA967C920B32243008961BB /* UIDevice.swift */; };
 		1AA967D120B32266008961BB /* UIImage+animatedGIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA967CF20B32265008961BB /* UIImage+animatedGIF.h */; };
 		1AA967D220B32266008961BB /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA967D020B32265008961BB /* UIImage+animatedGIF.m */; };
 		1ABBFACE20CFF8E400489229 /* SNPDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBFACD20CFF8E400489229 /* SNPDecodable.swift */; };
+		1ABBFAD020D00D1500489229 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBFACF20D00D1500489229 /* Bundle.swift */; };
 		3EDF8A863E24287514FBD0F3EAFCC256 /* SNPUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CF50F6469CB24FCF410CA487943EBC /* SNPUtilities-dummy.m */; };
 		63EC6ABBB78D7A62BC5062A26F06F956 /* SNPUtilities-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E65D8FF41773D4B95D743A7C352242D7 /* SNPUtilities-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7FA0F6F58DA8D8BAE8C247F6E69C03AF /* Pods-SNPUtilities_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0237EAA8ACC8BE9314D5601092F559 /* Pods-SNPUtilities_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,11 +53,11 @@
 		1A787FFBFB899CBA754DDEB6FBF3043C /* Pods-SNPUtilities_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SNPUtilities_Tests-resources.sh"; sourceTree = "<group>"; };
 		1AA967C620B32243008961BB /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		1AA967C720B32243008961BB /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		1AA967C820B32243008961BB /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		1AA967C920B32243008961BB /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		1AA967CF20B32265008961BB /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		1AA967D020B32265008961BB /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		1ABBFACD20CFF8E400489229 /* SNPDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SNPDecodable.swift; path = SNPUtilities/Classes/SNPDecodable.swift; sourceTree = "<group>"; };
+		1ABBFACF20D00D1500489229 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		1AF3390B1684583DED7AD99FAE692448 /* Pods-SNPUtilities_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNPUtilities_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2279C83F3CE62590F9D470D9A9DFE39F /* Pods-SNPUtilities_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SNPUtilities_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		325A25EC79485B27B7DE38C3B2F315DA /* SNPUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNPUtilities.swift; path = SNPUtilities/Classes/SNPUtilities.swift; sourceTree = "<group>"; };
@@ -143,10 +143,10 @@
 		1AA967D320B322F0008961BB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1AA967C820B32243008961BB /* Bundle.swift */,
 				1AA967C720B32243008961BB /* Dictionary.swift */,
 				1AA967C620B32243008961BB /* Int.swift */,
 				1AA967C920B32243008961BB /* UIDevice.swift */,
+				1ABBFACF20D00D1500489229 /* Bundle.swift */,
 			);
 			name = Extensions;
 			path = SNPUtilities/Classes/Extensions;
@@ -406,9 +406,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD334B86E17670561199F0E48AF5B41D /* SNPError.swift in Sources */,
-				1AA967CC20B32243008961BB /* Bundle.swift in Sources */,
 				E4A20E55594B4C478BA0B927555F4AF1 /* SNPErrorDomain.swift in Sources */,
 				1AA967CA20B32243008961BB /* Int.swift in Sources */,
+				1ABBFAD020D00D1500489229 /* Bundle.swift in Sources */,
 				1AA967D220B32266008961BB /* UIImage+animatedGIF.m in Sources */,
 				3EDF8A863E24287514FBD0F3EAFCC256 /* SNPUtilities-dummy.m in Sources */,
 				E333FA55CCEEA8917CECFC3250A68765 /* SNPUtilities.swift in Sources */,
