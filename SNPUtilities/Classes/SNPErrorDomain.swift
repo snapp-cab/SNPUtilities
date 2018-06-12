@@ -9,9 +9,15 @@
 import Foundation
 
 public struct SNPErrorDomain {
-    private static let prefix = Bundle.main.info(for: kCFBundleIdentifierKey! as String) + ".error"
+    private static let prefix: String = {
+        if Bundle.main.info(for: kCFBundleIdentifierKey! as String) == nil {
+            return "test.bundle.error"
+        } else {
+            return Bundle.main.info(for: kCFBundleIdentifierKey! as String) + ".error"
+        }
+    }()
     
     static let generic = prefix
-    static let authentication = prefix + ".authentication"
-    static let network = prefix + ".network"
+//    static let authentication = prefix + ".authentication"
+//    static let network = prefix + ".network"
 }

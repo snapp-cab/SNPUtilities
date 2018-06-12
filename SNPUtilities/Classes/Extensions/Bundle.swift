@@ -13,7 +13,7 @@ extension Bundle {
         return loadNibNamed(nibName, owner: nil, options: nil)?.first as! T
     }
 
-    func info(for key: String) -> String {
+    func info(for key: String) -> String! {
         return (infoDictionary?[key] as! String).replacingOccurrences(of: "\\", with: "")
     }
 
