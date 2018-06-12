@@ -13,6 +13,7 @@
 		1AA967CD20B32243008961BB /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA967C920B32243008961BB /* UIDevice.swift */; };
 		1AA967D120B32266008961BB /* UIImage+animatedGIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA967CF20B32265008961BB /* UIImage+animatedGIF.h */; };
 		1AA967D220B32266008961BB /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA967D020B32265008961BB /* UIImage+animatedGIF.m */; };
+		1ABBFACE20CFF8E400489229 /* SNPDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABBFACD20CFF8E400489229 /* SNPDecodable.swift */; };
 		3EDF8A863E24287514FBD0F3EAFCC256 /* SNPUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CF50F6469CB24FCF410CA487943EBC /* SNPUtilities-dummy.m */; };
 		63EC6ABBB78D7A62BC5062A26F06F956 /* SNPUtilities-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E65D8FF41773D4B95D743A7C352242D7 /* SNPUtilities-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7FA0F6F58DA8D8BAE8C247F6E69C03AF /* Pods-SNPUtilities_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0237EAA8ACC8BE9314D5601092F559 /* Pods-SNPUtilities_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,6 +57,7 @@
 		1AA967C920B32243008961BB /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		1AA967CF20B32265008961BB /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		1AA967D020B32265008961BB /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		1ABBFACD20CFF8E400489229 /* SNPDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNPDecodable.swift; sourceTree = "<group>"; };
 		1AF3390B1684583DED7AD99FAE692448 /* Pods-SNPUtilities_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNPUtilities_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2279C83F3CE62590F9D470D9A9DFE39F /* Pods-SNPUtilities_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SNPUtilities_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		325A25EC79485B27B7DE38C3B2F315DA /* SNPUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNPUtilities.swift; path = SNPUtilities/Classes/SNPUtilities.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				BBD6BE2FF1932AE9DDDEA97FF6480A0C /* SNPError.swift */,
 				02C16404873FDA3486D526F651410510 /* SNPErrorDomain.swift */,
 				325A25EC79485B27B7DE38C3B2F315DA /* SNPUtilities.swift */,
+				1ABBFACD20CFF8E400489229 /* SNPDecodable.swift */,
 				6BAF66BC0FA2709DFF05B320C9141BC6 /* Pod */,
 				76C8AA12E1724B6508FBB1877865B30D /* Support Files */,
 			);
@@ -411,6 +414,7 @@
 				E333FA55CCEEA8917CECFC3250A68765 /* SNPUtilities.swift in Sources */,
 				1AA967CB20B32243008961BB /* Dictionary.swift in Sources */,
 				1AA967CD20B32243008961BB /* UIDevice.swift in Sources */,
+				1ABBFACE20CFF8E400489229 /* SNPDecodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

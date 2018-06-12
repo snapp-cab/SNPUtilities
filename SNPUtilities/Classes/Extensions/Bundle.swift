@@ -9,12 +9,12 @@
 import Foundation
 
 extension Bundle {
-    static func load<T>(_ nibName: String = String(describing: T.self)) -> T {
-        return Bundle.main.loadNibNamed(nibName, owner: nil, options: nil)?.first as! T
+    func load<T>(_ nibName: String = String(describing: T.self)) -> T {
+        return loadNibNamed(nibName, owner: nil, options: nil)?.first as! T
     }
 
-    static func info(for key: String) -> String {
-        return (Bundle.main.infoDictionary?[key] as! String).replacingOccurrences(of: "\\", with: "")
+    func info(for key: String) -> String {
+        return (infoDictionary?[key] as! String).replacingOccurrences(of: "\\", with: "")
     }
 
     func read(fileName: String, type: String) -> String? {

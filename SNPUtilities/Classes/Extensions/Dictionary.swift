@@ -7,14 +7,13 @@
 //
 
 import Foundation
-import SNPUtilities
 
 extension Dictionary {
     /**
      Converts dictionary to T, which T is decodable.
-
+     
      - Parameter N/A
-
+     
      - Returns: T, which T is Decodable.
      */
     func convertToModel<T: Decodable>() -> T? {
@@ -28,42 +27,61 @@ extension Dictionary {
             return SNPError(domain: "convertingJson", code: 999, message: error.localizedDescription) as? T
         }
     }
-
+    
     /**
      Converts response dictionary to model: T, for given keyPath from caller.
-
+     
      - Parameter dic: response dictionary.
      - Parameter key: given keyPath.
-
+     
      - Returns: T, which is a Decodable model.
      */
     func toModel<T: Decodable>(key: String?) -> T {
         let array = key?.components(separatedBy: ".")
-        let finalDictionary = getValue(forKeyPath: array!)
-        let result: T = finalDictionary!.convertToModel()!
+        let finalDic = getValue(forKeyPath: array!)
+        let result: T = finalDic.convertToModel()!
         return result
+    }
+    
+    /**
+     Merge and return a new dictionary.
+     
+     - Parameter with: is dictionary.
+     
+     - Returns: dictionary.
+     */
+    func merge(with: [Key: Value]?) -> [Key: Value]? {
+        var copy = self
+        for (key, val) in with! {
+            // If a key is already present it will be overritten
+            copy[key] = val
+        }
+        return copy
     }
 }
 
 extension Dictionary where Key: Any, Value: Any {
     /**
      Returns a dictionary for a given KeyPath in a recursive manner.
-
+     
      - Parameter components: Nested Keys as an Array.
-
+     
      - Returns: A dictionary.
      */
-    func getValue(forKeyPath components: [Any]) -> [String: AnyObject]? {
+    func getValue(forKeyPath components: [Any]) -> [String: AnyObject] {
         var comps = components
         let key = comps.remove(at: 0)
-        if let key = key as? Key {
-            if comps.count == 0 {
-                return self[key] as? [String: AnyObject]
+        if let aKey = key as? Key {
+            if aKey is String && (aKey as! String) == "" {
+                return self as! [String: AnyObject]
             }
-            if let value = self[key] as? [String: AnyObject] {
+            if comps.count == 0 {
+                return self[aKey] as! [String: AnyObject]
+            }
+            if let value = self[aKey] as? [String: AnyObject] {
                 return value.getValue(forKeyPath: comps)
             }
         }
-        return nil
+        return [:]
     }
 }

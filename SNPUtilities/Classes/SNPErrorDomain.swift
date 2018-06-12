@@ -9,7 +9,7 @@
 import Foundation
 
 public struct SNPErrorDomain {
-    private static let prefix = "ir.snapp.passenger.error"
+    private static let prefix = Bundle.main.info(for: kCFBundleIdentifierKey! as String) + ".error"
     
     static let generic = prefix
     static let authentication = prefix + ".authentication"
