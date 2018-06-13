@@ -16,7 +16,7 @@ extension Dictionary {
      
      - Returns: T, which T is Decodable.
      */
-    func convertToModel<T: Decodable>() -> T? {
+    public func convertToModel<T: Decodable>() -> T? {
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
             let decoder = JSONDecoder()
@@ -36,7 +36,7 @@ extension Dictionary {
      
      - Returns: T, which is a Decodable model.
      */
-    func toModel<T: Decodable>(key: String?) -> T {
+    public func toModel<T: Decodable>(key: String?) -> T {
         let array = key?.components(separatedBy: ".")
         let finalDic = getValue(forKeyPath: array!)
         let result: T = finalDic.convertToModel()!
@@ -68,7 +68,7 @@ extension Dictionary where Key: Any, Value: Any {
      
      - Returns: A dictionary.
      */
-    func getValue(forKeyPath components: [Any]) -> [String: AnyObject] {
+    public func getValue(forKeyPath components: [Any]) -> [String: AnyObject] {
         var comps = components
         let key = comps.remove(at: 0)
         if let aKey = key as? Key {
