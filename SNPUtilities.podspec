@@ -13,5 +13,5 @@ s.author           = { 'Arash Z. Jahangiri' => 'arashzjahangiri@gmail.com' }
 s.source           = { :git => 'https://github.com/snapp-cab/SNPUtilities.git', :tag => s.version.to_s }
 
 s.ios.deployment_target = '9.0'
-s.source_files = 'SNPUtilities/Classes'
+s.source_files = ['SNPUtilities/Classes/**/*.{swift}', 'SNPUtilities/Classes/**/*.{m}', 'SNPUtilities/Classes/**/*.{h}']
 end
