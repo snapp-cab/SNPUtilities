@@ -13,7 +13,10 @@ extension Bundle {
     }
     
     func info(for key: String) -> String! {
-        return (infoDictionary?[key] as! String).replacingOccurrences(of: "\\", with: "")
+        guard let value = infoDictionary?[key] else {
+            return nil
+        }
+        return (value as! String).replacingOccurrences(of: "\\", with: "")
     }
     
     func read(fileName: String, type: String) -> String? {
