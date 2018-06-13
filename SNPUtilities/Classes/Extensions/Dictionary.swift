@@ -50,7 +50,7 @@ extension Dictionary {
      
      - Returns: dictionary.
      */
-    func merge(with: [Key: Value]?) -> [Key: Value]? {
+    public func merge(with: [Key: Value]?) -> [Key: Value]? {
         var copy = self
         for (key, val) in with! {
             // If a key is already present it will be overritten

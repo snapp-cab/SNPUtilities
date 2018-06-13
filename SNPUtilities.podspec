@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'SNPUtilities'
-s.version          = '1.1.1'
+s.version          = '1.1.2'
 s.summary          = 'SNPUtilities is a Swift-based helper library for iOS.'
 
 s.description      = <<-DESC
