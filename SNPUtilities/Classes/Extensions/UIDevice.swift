@@ -20,4 +20,8 @@ extension UIDevice {
         }
         return identifier
     }
+    
+    public var hasNotch: Bool {
+        return modelName == "iPhone10,3" || modelName == "iPhone10,6" || modelName.hasPrefix("iPhone11")
+    }
 }
