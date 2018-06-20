@@ -16,7 +16,7 @@ SNPUtilities is a Swift-based helper library for iOS. Our plan is to add any hel
 8. Category for UIImage(Objective-C).<br/>
 9. Keychain wrapper.<br/>
 10. Extension to NSString.<br/>
-
+11. Extension to UIViewController.<br/>
 ## Getting Started
 
 1. Add a Podfile. In the terminal, navigate to your Xcode project directory. Create a Podfile by running the following command.
