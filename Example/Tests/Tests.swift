@@ -111,4 +111,21 @@ class Tests: XCTestCase {
         XCTAssertEqual(999, snpError.code)
         XCTAssertEqual(SNPErrorDomain.generic, snpError.domain)
     }
+    
+    func testPersian() {
+        XCTAssertEqual("1234567890".convertDigitsToPersian(),"۱۲۳۴۵۶۷۸۹۰")
+        var str = "1234567890"
+        str.convertedDigitsToPersian()
+        XCTAssertEqual(str, "۱۲۳۴۵۶۷۸۹۰")
+        XCTAssertEqual("aText".commaSeparate(length: 0), "aText")
+        XCTAssertEqual("aText".commaSeparate(length: 1), "a,T,e,x,t")
+        XCTAssertEqual("aTextToTest".commaSeparate(length: 2), "aT,ex,tT,oT,es,t")
+        XCTAssertEqual("EdgeToTest".commaSeparate(length: 2), "Ed,ge,To,Te,st")
+        str = "aTextToTest"
+        str.commaSeparated(length: 2)
+        XCTAssertEqual(str, "aT,ex,tT,oT,es,t")
+        XCTAssertEqual("123456".convertPersianPrice(), "۱۲۳,۴۵۶")
+        
+        
+    }
 }
