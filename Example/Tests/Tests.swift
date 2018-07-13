@@ -9,7 +9,7 @@ public enum FileExistence: Equatable {
     case directory
 }
 
-public func ==(lhs: FileExistence, rhs: FileExistence) -> Bool {
+public func == (lhs: FileExistence, rhs: FileExistence) -> Bool {
     
     switch (lhs, rhs) {
     case (.none, .none),
@@ -113,9 +113,10 @@ class Tests: XCTestCase {
     }
     
     func testPersian() {
-        XCTAssertEqual("1234567890".convertDigitsToPersian(),"۱۲۳۴۵۶۷۸۹۰")
+        let locale = Locale(identifier: "fa_IR")
+        XCTAssertEqual("1234567890".convertDigitsFromEnglish(to: locale),"۱۲۳۴۵۶۷۸۹۰")
         var str = "1234567890"
-        str.convertedDigitsToPersian()
+        str.convertedDigitsFromEnglish(to: locale)
         XCTAssertEqual(str, "۱۲۳۴۵۶۷۸۹۰")
         XCTAssertEqual("aText".commaSeparate(length: 0), "aText")
         XCTAssertEqual("aText".commaSeparate(length: 1), "a,T,e,x,t")
@@ -124,8 +125,13 @@ class Tests: XCTestCase {
         str = "aTextToTest"
         str.commaSeparated(length: 2)
         XCTAssertEqual(str, "aT,ex,tT,oT,es,t")
-        XCTAssertEqual("123456".convertPersianPrice(), "۱۲۳,۴۵۶")
+        XCTAssertEqual("123456".convertToPrice(for: locale), "۱۲۳,۴۵۶")
         
+        XCTAssertEqual("۰۹۱۹۰۱۶۳۲۸۶".convertDigitsToEnglish(), "09190163286")
+        str = "۰۹۱۹۰۱۶۳۲۸۶"
+        str.convertedDigitsToEnglish()
+        XCTAssertEqual(str, "09190163286")
+        //In case of problem call me ↑
         
     }
 }
