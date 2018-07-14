@@ -12,7 +12,7 @@ extension UIViewController {
         addChildViewController(childViewController)
         childViewController.didMove(toParentViewController: self)
         
-        containerView.addExpletiveSubView(view: containerView)
+        containerView.addExpletiveSubView(view: childViewController.view)
     
     }
 }
