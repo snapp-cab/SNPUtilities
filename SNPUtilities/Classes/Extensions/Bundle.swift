@@ -8,8 +8,8 @@
 import Foundation
 
 extension Bundle {
-    public func load<T>(_ nibName: String = String(describing: T.self)) -> T {
-        return loadNibNamed(nibName, owner: nil, options: nil)?.first as! T
+    public func load<T>(_ nibName: String = String(describing: T.self), owner: Any? = nil) -> T {
+        return loadNibNamed(nibName, owner: owner, options: nil)?.first as! T
     }
     
     public func info(for key: String) -> String! {

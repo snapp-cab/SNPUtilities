@@ -14,7 +14,7 @@ extension UInt16 {
 }
 extension Character {
     public var toPersian: Character {
-        if !("0"..."9" ~= self){
+        if !("0"..."9" ~= self) {
             return self
         }
         return Character(Unicode.Scalar((self.unicodeScalars.first?.utf16.first)!.toPersian)!)
@@ -22,11 +22,37 @@ extension Character {
 }
 
 extension String {
-    public func convertDigitsToPersian() -> String {
-            return String(self.map({$0.toPersian}))
+    public func convertDigitsFromEnglish(to locale: Locale) -> String {
+        let formatter = NumberFormatter()
+        formatter.locale = locale
+        var formatted = ""
+        for char in self {
+            if let num = Int("\(char)") {
+                formatted.append(formatter.string(for: num)!)
+            } else {
+                formatted.append(char)
+            }
+        }
+        return formatted
     }
-    public mutating func convertedDigitsToPersian() {
-        self = self.convertDigitsToPersian()
+    public mutating func convertedDigitsFromEnglish(to locale: Locale) {
+        self = self.convertDigitsFromEnglish(to: locale)
+    }
+    public func convertDigitsToEnglish() -> String {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "en_US")
+        var formatted = ""
+        for char in self {
+            if let num = formatter.number(from: "\(char)") {
+                formatted.append("\(num)")
+            } else {
+                formatted.append(char)
+            }
+        }
+        return formatted
+    }
+    public mutating func convertedDigitsToEnglish() {
+        self = self.convertDigitsToEnglish()
     }
     
     public func commaSeparate(length: Int) -> String {
@@ -50,12 +76,12 @@ extension String {
         self = self.commaSeparate(length: length)
     }
     
-    public func convertPersianPrice() -> String {
-        return String(String(self.convertDigitsToPersian().reversed()).commaSeparate(length: 3).reversed())
+    public func convertToPrice(for local:Locale) -> String {
+        
+        return String(String(self.convertDigitsFromEnglish(to: local).reversed()).commaSeparate(length: 3).reversed())
     }
-    public mutating func convertedPersianPrice() {
-        self = self.convertPersianPrice()
+    public mutating func convertedToPrice(for local: Locale) {
+        self = self.convertToPrice(for: local)
     }
-
+    
 }
-
