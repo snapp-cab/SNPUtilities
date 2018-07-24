@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    public func convertDigitsFromEnglish(to locale: Locale) -> String {
+    public func convertedDigitsFromEnglish(to locale: Locale) -> String {
         let formatter = NumberFormatter()
         formatter.locale = locale
         var formatted = ""
@@ -22,11 +22,11 @@ extension String {
         return formatted
     }
     
-    public mutating func convertedDigitsFromEnglish(to locale: Locale) {
-        self = self.convertDigitsFromEnglish(to: locale)
+    public mutating func convertDigitsFromEnglish(to locale: Locale) {
+        self = self.convertedDigitsFromEnglish(to: locale)
     }
     
-    public func convertDigitsToEnglish() -> String {
+    public func convertedDigitsToEnglish() -> String {
         let formatter = NumberFormatter()
         formatter.locale = Locale(identifier: "en_US")
         var formatted = ""
@@ -40,11 +40,11 @@ extension String {
         return formatted
     }
     
-    public mutating func convertedDigitsToEnglish() {
-        self = self.convertDigitsToEnglish()
+    public mutating func convertDigitsToEnglish() {
+        self = self.convertedDigitsToEnglish()
     }
     
-    public func commaSeparate(length: Int) -> String {
+    public func commaSeparated(length: Int) -> String {
         if length == 0 {
             return self
         }
@@ -61,22 +61,20 @@ extension String {
         return holder
     }
     
-    public mutating func commaSeparated(length: Int) {
-        self = self.commaSeparate(length: length)
+    public mutating func commaSeparate(length: Int) {
+        self = self.commaSeparated(length: length)
     }
     
-    public func convertToPrice(for local:Locale) -> String {
-        
-        return String(String(self.convertDigitsFromEnglish(to: local).reversed()).commaSeparate(length: 3).reversed())
+    public func convertedToPrice(for local:Locale) -> String {
+        return String(String(self.convertedDigitsFromEnglish(to: local).reversed()).commaSeparated(length: 3).reversed())
     }
     
-    public mutating func convertedToPrice(for local: Locale) {
-        self = self.convertToPrice(for: local)
+    public mutating func convertToPrice(for local: Locale) {
+        self = self.convertedToPrice(for: local)
     }
     
     /**
      A shortcut method for printing HTTP response bodies in NSURLSessionDataTask
-     
      - Parameter utf8Data: Data encoded in UTF8 format
      */
     public init?(utf8Data: Data) {

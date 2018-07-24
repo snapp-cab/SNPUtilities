@@ -13,22 +13,21 @@ import Foundation
 class StringExtensionsTests: XCTestCase {
     func testPersian() {
         let locale = Locale(identifier: "fa_IR")
-        XCTAssertEqual("1234567890".convertDigitsFromEnglish(to: locale),"۱۲۳۴۵۶۷۸۹۰")
+        XCTAssertEqual("1234567890".convertedDigitsFromEnglish(to: locale), "۱۲۳۴۵۶۷۸۹۰")
         var string = "1234567890"
-        string.convertedDigitsFromEnglish(to: locale)
+        string.convertDigitsFromEnglish(to: locale)
         XCTAssertEqual(string, "۱۲۳۴۵۶۷۸۹۰")
-        XCTAssertEqual("aText".commaSeparate(length: 0), "aText")
-        XCTAssertEqual("aText".commaSeparate(length: 1), "a,T,e,x,t")
-        XCTAssertEqual("aTextToTest".commaSeparate(length: 2), "aT,ex,tT,oT,es,t")
-        XCTAssertEqual("EdgeToTest".commaSeparate(length: 2), "Ed,ge,To,Te,st")
+        XCTAssertEqual("aText".commaSeparated(length: 0), "aText")
+        XCTAssertEqual("aText".commaSeparated(length: 1), "a,T,e,x,t")
+        XCTAssertEqual("aTextToTest".commaSeparated(length: 2), "aT,ex,tT,oT,es,t")
+        XCTAssertEqual("EdgeToTest".commaSeparated(length: 2), "Ed,ge,To,Te,st")
         string = "aTextToTest"
-        string.commaSeparated(length: 2)
+        string.commaSeparate(length: 2)
         XCTAssertEqual(string, "aT,ex,tT,oT,es,t")
-        XCTAssertEqual("123456".convertToPrice(for: locale), "۱۲۳,۴۵۶")
-        
-        XCTAssertEqual("۰۹۱۹۰۱۶۳۲۸۶".convertDigitsToEnglish(), "09190163286")
+        XCTAssertEqual("123456".convertedToPrice(for: locale), "۱۲۳,۴۵۶")
+        XCTAssertEqual("۰۹۱۹۰۱۶۳۲۸۶".convertedDigitsToEnglish(), "09190163286")
         string = "۰۹۱۹۰۱۶۳۲۸۶"
-        string.convertedDigitsToEnglish()
+        string.convertDigitsToEnglish()
         XCTAssertEqual(string, "09190163286")
         //In case of problem call me ↑
     }
