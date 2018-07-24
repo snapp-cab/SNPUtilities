@@ -1,5 +1,5 @@
 PODS:
-  - SNPUtilities (1.1.4)
+  - SNPUtilities (1.1.8)
 
 DEPENDENCIES:
   - SNPUtilities (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SNPUtilities: 92b63cdb73520c6e96cd89b18642eeb28eb2bc58
+  SNPUtilities: 6031a19d5778bc861c5e1539571d3fb1c321416e
 
 PODFILE CHECKSUM: b37568966b96fb37a12d93901fc48da1287b8575
 

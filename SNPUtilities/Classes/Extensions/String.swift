@@ -1,25 +1,11 @@
 //
-//  Persian.swift
+//  String.swift
 //  Pods-SNPUtilities_Example
 //
-//  Created by farhad jebelli on 7/2/18.
+//  Created by Behdad Keynejad on 5/2/1397 AP.
 //
 
 import Foundation
-
-extension UInt16 {
-    public var toPersian: UInt16 {
-        return self - "0".utf16.first! + "۰".utf16.first!
-    }
-}
-extension Character {
-    public var toPersian: Character {
-        if !("0"..."9" ~= self) {
-            return self
-        }
-        return Character(Unicode.Scalar((self.unicodeScalars.first?.utf16.first)!.toPersian)!)
-    }
-}
 
 extension String {
     public func convertDigitsFromEnglish(to locale: Locale) -> String {
@@ -35,9 +21,11 @@ extension String {
         }
         return formatted
     }
+    
     public mutating func convertedDigitsFromEnglish(to locale: Locale) {
         self = self.convertDigitsFromEnglish(to: locale)
     }
+    
     public func convertDigitsToEnglish() -> String {
         let formatter = NumberFormatter()
         formatter.locale = Locale(identifier: "en_US")
@@ -51,6 +39,7 @@ extension String {
         }
         return formatted
     }
+    
     public mutating func convertedDigitsToEnglish() {
         self = self.convertDigitsToEnglish()
     }
@@ -80,8 +69,17 @@ extension String {
         
         return String(String(self.convertDigitsFromEnglish(to: local).reversed()).commaSeparate(length: 3).reversed())
     }
+    
     public mutating func convertedToPrice(for local: Locale) {
         self = self.convertToPrice(for: local)
     }
     
+    /**
+     A shortcut method for printing HTTP response bodies in NSURLSessionDataTask
+     
+     - Parameter utf8Data: Data encoded in UTF8 format
+     */
+    public init?(utf8Data: Data) {
+        self.init(data: utf8Data, encoding: .utf8)
+    }
 }
