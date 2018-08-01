@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
     public func convertedDigitsFromEnglish(to locale: Locale) -> String {
         let formatter = NumberFormatter()
         formatter.locale = locale
@@ -99,7 +99,7 @@ extension String {
         return String(String.UnicodeScalarView(filtredUnicodeScalars))
     }
     
-    func makeCall() {
+    public func makeCall() {
         if isValid(regex: .phone) {
             if let url = URL(string: "telprompt://\(self.onlyDigits())"), UIApplication.shared.canOpenURL(url) {
                 if #available(iOS 10, *) {
