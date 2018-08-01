@@ -61,7 +61,7 @@ class SNPKeybordHeightConstraint: NSLayoutConstraint {
             }
             UIView.animate(withDuration: 0.3, animations: { [unowned self] in
                 self.constant = height + self.margin
-            
+                view.layoutIfNeeded()
             })
         }
     }
