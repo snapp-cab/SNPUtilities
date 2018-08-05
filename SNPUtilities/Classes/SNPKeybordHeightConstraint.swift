@@ -11,7 +11,7 @@ class SNPKeybordHeightConstraint: NSLayoutConstraint {
     
     @IBInspectable var useSafeArea: Bool = true
     @IBInspectable var margin: CGFloat = 0
-
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +19,6 @@ class SNPKeybordHeightConstraint: NSLayoutConstraint {
         NotificationCenter.default.addObserver(self, selector: #selector(keybordFrameChanged), name: .UIKeyboardDidChangeFrame, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keybordHide), name: .UIKeyboardWillHide, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keybordShow), name: .UIKeyboardWillShow, object: nil)
-        
     }
     
     //MARK: HandleKeyBord
@@ -34,7 +33,12 @@ class SNPKeybordHeightConstraint: NSLayoutConstraint {
     }
     @objc func keybordHide(notification: Notification) {
         isKeybordHide = true
-        self.constant = 0
+        let time = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? CFTimeInterval) ?? 3.0
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(time)
+        self.constant = self.margin
+        CATransaction.commit()
+        CATransaction.flush()
     }
     func setKeybordHeigth(notification: Notification){
         if !isKeybordHide {
@@ -59,10 +63,13 @@ class SNPKeybordHeightConstraint: NSLayoutConstraint {
                     height -= bottom
                 }
             }
-            UIView.animate(withDuration: 0.3, animations: { [unowned self] in
-                self.constant = height + self.margin
-                view.layoutIfNeeded()
-            })
+            
+            let time = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? CFTimeInterval) ?? 3.0
+            CATransaction.begin()
+            CATransaction.setAnimationDuration(time)
+            self.constant = height + self.margin
+            CATransaction.commit()
+            CATransaction.flush()
         }
     }
     
