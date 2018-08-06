@@ -36,4 +36,18 @@ class StringExtensionsTests: XCTestCase {
         let data = Data(base64Encoded: "c25hcHAgcm9ja3M=")!
         XCTAssertEqual(String(utf8Data: data), "snapp rocks")
     }
+    
+    private func isPhone(_ string: String) {
+        let result = string.isValid(regex: .phone)
+        print("\(result ? "✅" : "❌")\(string)")
+    }
+    
+    func testIsPhoneNumber() {
+        isPhone("blabla")
+        isPhone("Arash12345")
+        isPhone("12345Arash")
+        isPhone("Arash12345Arash")
+        isPhone("09123456789")
+        isPhone("+989123456789")
+    }
 }
