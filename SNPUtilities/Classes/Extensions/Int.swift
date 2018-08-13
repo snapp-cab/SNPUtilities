@@ -17,4 +17,12 @@ extension Int {
             return self == 0 ? false : true
     }
     
+    init?(string: String?) {
+        guard let string = string else {
+            return nil
+        }
+        self.init(string)
+        
+    }
+    
 }
