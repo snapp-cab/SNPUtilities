@@ -12,23 +12,23 @@ enum SNPDecoderError: Error {
     case nilError(error: String)
 }
 
-class SNPDecoder <T: Decodable> {
+public class SNPDecoder <T: Decodable> {
     private var value: T?
     private var array: [T]?
     private let path: String?
     private let decoder: DecoderContainer
-    init(type: T.Type,data: Data,codingPath: String?) throws {
+    public init(type: T.Type,data: Data,codingPath: String?) throws {
         decoder = try! JSONDecoder().decode(DecoderContainer.self, from: data)
         self.path = codingPath
         
     }
     
-    func decode() throws ->  T? {
+    public func decode() throws ->  T? {
         try extractPath(container: decoder.decoder)
         return value
     }
     
-    func decodeArray() throws ->  [T]? {
+    public func decodeArray() throws ->  [T]? {
         try extractPath(container: decoder.decoder)
         return array
     }
