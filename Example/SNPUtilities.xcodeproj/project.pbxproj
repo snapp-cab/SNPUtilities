@@ -17,6 +17,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* SNPUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* SNPUtilitiesTests.swift */; };
 		7441DEE8BB9726BDB012790F /* Pods_SNPUtilities_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F797B337046E3C82EAB06D /* Pods_SNPUtilities_Example.framework */; };
+		C47AA0AA212983B7004B2D84 /* SNPDecoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47AA0A9212983B7004B2D84 /* SNPDecoderTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		86EAB47E744387BFB7A7437C /* SNPUtilities.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SNPUtilities.podspec; path = ../SNPUtilities.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B3F34E77F26C8DFD4D3D45F8 /* Pods-SNPUtilities_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNPUtilities_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNPUtilities_Tests/Pods-SNPUtilities_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFB215AE1B0280A96E334BA0 /* Pods-SNPUtilities_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNPUtilities_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNPUtilities_Example/Pods-SNPUtilities_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C47AA0A9212983B7004B2D84 /* SNPDecoderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNPDecoderTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				607FACEB1AFB9204008FA782 /* SNPUtilitiesTests.swift */,
 				1A663F0621070F490086DE18 /* StringExtensionsTests.swift */,
 				1A0668B22107105800D57F1A /* SNPErrorTests.swift */,
+				C47AA0A9212983B7004B2D84 /* SNPDecoderTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			files = (
 				1A0668B42107117300D57F1A /* StringExtensionsTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* SNPUtilitiesTests.swift in Sources */,
+				C47AA0AA212983B7004B2D84 /* SNPDecoderTest.swift in Sources */,
 				1A0668B52107117600D57F1A /* SNPErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
