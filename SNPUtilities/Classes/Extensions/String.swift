@@ -110,4 +110,13 @@ public extension String {
             }
         }
     }
+    
+    public func makeUssdCall() {
+        let url = URL(string: "telprompt://\(self)")
+        if #available(iOS 10, *) {
+            UIApplication.shared.open(url!)
+        } else {
+            UIApplication.shared.openURL(url!)
+        }
+    }
 }
