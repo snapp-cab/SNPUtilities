@@ -25,8 +25,8 @@ extension Int {
         
     }
     
-    public func convertToEquivalence(month number: Int) -> String {
-        switch number {
+    public func convertToEquivalenceMonthName() -> String {
+        switch self {
         case 0:
             return NSLocalizedString("January", comment: "")
         case 1:
@@ -52,7 +52,7 @@ extension Int {
         case 11:
             return NSLocalizedString("December", comment: "")
         default:
-            return "\(number)"
+            return "\(self)"
         }
     }
 }
