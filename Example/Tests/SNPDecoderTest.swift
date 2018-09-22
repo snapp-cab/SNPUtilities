@@ -156,6 +156,18 @@ class SNPDecoderTest: XCTestCase {
         }
     }
     
+    func testEmpty() {
+        do {
+            let person: Person? = try SNPDecoder(type: Person.self, data: empty!, codingPath: "data").decode()
+            XCTAssertNotNil(person)
+            XCTAssertNil(person?.age)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+            
+        }
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
@@ -220,4 +232,8 @@ let nestedArray = """
 
 let nestedNestedArray = """
 {"index": [[[[1]],2,3],2,3,4,5]}
+""".data(using: .utf8)
+
+let empty = """
+{"data":{"message":"ride cancelled successfully"},"status":200}
 """.data(using: .utf8)
