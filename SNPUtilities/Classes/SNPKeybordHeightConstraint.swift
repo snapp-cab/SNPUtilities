@@ -15,7 +15,6 @@ class SNPKeybordHeightConstraint: NSLayoutConstraint {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print(123)
         NotificationCenter.default.addObserver(self, selector: #selector(keybordFrameChanged), name: .UIKeyboardDidChangeFrame, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keybordHide), name: .UIKeyboardWillHide, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keybordShow), name: .UIKeyboardWillShow, object: nil)
