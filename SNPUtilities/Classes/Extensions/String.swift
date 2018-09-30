@@ -125,4 +125,11 @@ public extension String {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: self)
     }
+    
+    public func validatePhoneNumber() -> Bool {
+        let regex = "09[0-9]{9}"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        
+        return predicate.evaluate(with: self.convertedDigitsToEnglish())
+    }
 }
