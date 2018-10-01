@@ -101,7 +101,7 @@ public extension String {
     
     public func makeCall() {
         if isValid(regex: .phone) {
-            if let url = URL(string: "telprompt://\(self.onlyDigits())"), UIApplication.shared.canOpenURL(url) {
+            if let url = URL(string: "telprompt://\(self)"), UIApplication.shared.canOpenURL(url) {
                 if #available(iOS 10, *) {
                     UIApplication.shared.open(url)
                 } else {
