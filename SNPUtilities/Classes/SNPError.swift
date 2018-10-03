@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SNPError: Decodable {
+public class SNPError: Error, Decodable {
     // MARK: - Properties
     public private(set) var domain = SNPErrorDomain.generic
     public private(set) var code = -1
