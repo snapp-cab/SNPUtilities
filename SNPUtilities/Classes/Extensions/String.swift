@@ -27,17 +27,12 @@ public extension String {
     }
     
     public func convertedDigitsToEnglish() -> String {
-        let formatter = NumberFormatter()
-        formatter.locale = Locale(identifier: "en_US")
-        var formatted = ""
-        for char in self {
-            if let num = formatter.number(from: "\(char)") {
-                formatted.append("\(num)")
-            } else {
-                formatted.append(char)
-            }
+        let Formatter = NumberFormatter()
+        Formatter.locale = Locale(identifier: "en_US")
+        if let final = Formatter.number(from: self){
+            return "\(final)"
         }
-        return formatted
+        return ""
     }
     
     public mutating func convertDigitsToEnglish() {
@@ -132,4 +127,12 @@ public extension String {
         
         return predicate.evaluate(with: self.convertedDigitsToEnglish())
     }
+    //    public func englishFormat() -> String? {
+    //        let Formatter = NumberFormatter()
+    //        Formatter.locale = NSLocale(localeIdentifier: "EN") as Locale!
+    //        if let final = Formatter.number(from: self) as? String {
+    //            return final
+    //        }
+    //        return nil
+    //    }
 }
