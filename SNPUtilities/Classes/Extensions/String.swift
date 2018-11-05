@@ -27,12 +27,17 @@ public extension String {
     }
     
     public func convertedDigitsToEnglish() -> String {
-        let Formatter = NumberFormatter()
-        Formatter.locale = Locale(identifier: "en_US")
-        if let final = Formatter.number(from: self){
-            return "\(final)"
+        let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "en_US")
+        var formatted = ""
+        for char in self {
+            if let num = formatter.number(from: "\(char)") {
+                formatted.append("\(num)")
+            } else {
+                formatted.append(char)
+            }
         }
-        return ""
+        return formatted
     }
     
     public mutating func convertDigitsToEnglish() {
