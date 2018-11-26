@@ -132,4 +132,12 @@ public extension String {
         
         return predicate.evaluate(with: self.convertedDigitsToEnglish())
     }
+    //    public func englishFormat() -> String? {
+    //        let Formatter = NumberFormatter()
+    //        Formatter.locale = NSLocale(localeIdentifier: "EN") as Locale!
+    //        if let final = Formatter.number(from: self) as? String {
+    //            return final
+    //        }
+    //        return nil
+    //    }
 }
