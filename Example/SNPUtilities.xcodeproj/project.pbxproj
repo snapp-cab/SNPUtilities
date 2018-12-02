@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0668B42107117300D57F1A /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A663F0621070F490086DE18 /* StringExtensionsTests.swift */; };
+		1A0668B52107117600D57F1A /* SNPErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0668B22107105800D57F1A /* SNPErrorTests.swift */; };
 		3D49EBFF82536B158F71EBD0 /* Pods_SNPUtilities_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBE406FE1398393EE56F403 /* Pods_SNPUtilities_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* SNPUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* SNPUtilitiesTests.swift */; };
 		7441DEE8BB9726BDB012790F /* Pods_SNPUtilities_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F797B337046E3C82EAB06D /* Pods_SNPUtilities_Example.framework */; };
+		C47AA0AA212983B7004B2D84 /* SNPDecoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47AA0A9212983B7004B2D84 /* SNPDecoderTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A0668B22107105800D57F1A /* SNPErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNPErrorTests.swift; sourceTree = "<group>"; };
+		1A663F0621070F490086DE18 /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
 		26F9742E691686D42E4422AE /* Pods-SNPUtilities_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNPUtilities_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNPUtilities_Tests/Pods-SNPUtilities_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2DBE406FE1398393EE56F403 /* Pods_SNPUtilities_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNPUtilities_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FA4751D76AC7352D46CC44 /* Pods-SNPUtilities_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNPUtilities_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNPUtilities_Example/Pods-SNPUtilities_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,11 +47,12 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SNPUtilities_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNPUtilities_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* SNPUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNPUtilitiesTests.swift; sourceTree = "<group>"; };
 		6F5A683B0442501DAC32EA47 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		86EAB47E744387BFB7A7437C /* SNPUtilities.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SNPUtilities.podspec; path = ../SNPUtilities.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B3F34E77F26C8DFD4D3D45F8 /* Pods-SNPUtilities_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNPUtilities_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNPUtilities_Tests/Pods-SNPUtilities_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFB215AE1B0280A96E334BA0 /* Pods-SNPUtilities_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNPUtilities_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNPUtilities_Example/Pods-SNPUtilities_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C47AA0A9212983B7004B2D84 /* SNPDecoderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNPDecoderTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +121,11 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				607FACEB1AFB9204008FA782 /* SNPUtilitiesTests.swift */,
+				1A663F0621070F490086DE18 /* StringExtensionsTests.swift */,
+				1A0668B22107105800D57F1A /* SNPErrorTests.swift */,
+				C47AA0A9212983B7004B2D84 /* SNPDecoderTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -219,7 +228,7 @@
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = QEHW524445;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -352,7 +361,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				1A0668B42107117300D57F1A /* StringExtensionsTests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* SNPUtilitiesTests.swift in Sources */,
+				C47AA0AA212983B7004B2D84 /* SNPDecoderTest.swift in Sources */,
+				1A0668B52107117600D57F1A /* SNPErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,12 +508,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QEHW524445;
 				INFOPLIST_FILE = SNPUtilities/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -512,12 +526,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QEHW524445;
 				INFOPLIST_FILE = SNPUtilities/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -538,8 +554,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -556,8 +571,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
